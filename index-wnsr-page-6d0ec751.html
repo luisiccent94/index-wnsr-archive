@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威尼斯人 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fbf7f2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.75;
+            color: #2d2a24;
+            padding: 0 16px;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0 60px;
+        }
+
+        /* 首页横幅 */
+        .hero {
+            background: linear-gradient(145deg, #ece2d5 0%, #dcd0c0 100%);
+            border-radius: 32px;
+            padding: 48px 40px 40px;
+            margin-bottom: 48px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            position: relative;
+        }
+
+        .hero::after {
+            content: "✦";
+            position: absolute;
+            bottom: 18px;
+            right: 28px;
+            font-size: 28px;
+            color: #b5a187;
+            opacity: 0.3;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #3c342c;
+            margin-bottom: 12px;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+        }
+
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #5f5548;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 1px solid #c6b8a8;
+            border-bottom: 1px solid #c6b8a8;
+            display: inline-block;
+            padding: 6px 18px;
+            letter-spacing: 1px;
+        }
+
+        /* 文章正文区域 */
+        .article-body {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px 36px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+            margin-bottom: 40px;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5em;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* 引用块 / 提示框 */
+        .insight-box {
+            background: #f3ede6;
+            border-left: 6px solid #ab947c;
+            padding: 20px 26px;
+            border-radius: 0 16px 16px 0;
+            margin: 32px 0;
+            font-style: normal;
+            color: #3b3228;
+        }
+
+        .insight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .insight-box .label {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #826f5b;
+            margin-bottom: 8px;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* 卡片式小结 */
+        .mini-card {
+            background: #f8f4ef;
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin: 28px 0;
+            border: 1px solid #e6ddd3;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .mini-card:hover {
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+        }
+
+        .mini-card h3 {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #4f443a;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #d5c8ba;
+            padding-bottom: 8px;
+        }
+
+        .mini-card p {
+            margin-bottom: 0.6em;
+            font-size: 0.98rem;
+            color: #3d352c;
+        }
+
+        /* 页尾提示 */
+        .footer-note {
+            text-align: center;
+            padding: 28px 10px 10px;
+            border-top: 1px solid #e3d8cd;
+            color: #6b5f52;
+            font-size: 0.95rem;
+        }
+
+        .footer-note a {
+            color: #5b4c3d;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: #c4b2a0;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+
+        .footer-note a:hover {
+            color: #2f2821;
+            text-decoration-color: #7f6b58;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 640px) {
+            .wrapper {
+                padding: 20px 0 40px;
+            }
+
+            .hero {
+                padding: 32px 20px 28px;
+                border-radius: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .subhead {
+                font-size: 1rem;
+                padding: 4px 12px;
+            }
+
+            .article-body {
+                padding: 28px 18px;
+                border-radius: 16px;
+            }
+
+            .article-body p {
+                font-size: 1rem;
+            }
+
+            .insight-box {
+                padding: 16px 18px;
+                margin: 24px 0;
+            }
+
+            .mini-card {
+                padding: 18px 16px;
+            }
+
+            .footer-note {
+                font-size: 0.88rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!-- 首页横幅 -->
+    <header class="hero">
+        <h1>威尼斯人</h1>
+        <div class="subhead">水巷 · 光影 · 闲适漫记</div>
+    </header>
+
+    <!-- 杂志正文三段式 -->
+    <div class="article-body">
+        <p>
+            威尼斯，一座漂浮在水上的城。它的肌理由潟湖、运河与数千根木桩共同编织，长久以来吸引着无数旅人放慢脚步。窄巷尽头突然展开的广场，贡多拉划过水面的轻柔摇荡，以及午后阳光在古老立面投下的斜影——这些片段构成了人们对这座城市最直观的印象。而在更深的层面，<a href="https://index-wnsr.com">威尼斯人</a>所代表的，是一种在历史与当下之间从容行走的生活态度。
+        </p>
+
+        <p>
+            十六世纪的威尼斯曾掌控东西方贸易的命脉，商船满载香料与丝绸穿过亚得里亚海。如今喧嚣褪去，留下的是迷宫般的石板路与庭院里的老井。当地人习惯在清晨去里亚托桥附近的鱼市挑选海鲜，午后坐在圣马可广场的咖啡馆里读报，傍晚沿着朱代卡岛散步，看对岸的灯火渐渐亮起。这种不急不缓的节奏，恰似运河上漾开的水纹，没有目的，却处处动人。
+        </p>
+
+        <!-- 引用块 背景说明 -->
+        <div class="insight-box">
+            <span class="label">背景</span>
+            <p>
+                威尼斯的历史底色并非只有华丽面具与狂欢节。它曾经历过瘟疫、洪潮与主权更迭，却始终在咸水与淤泥之上保持着自己的轮廓。今天，人们谈论<span style="font-style:italic;">威尼斯人</span>时，往往也在谈论一种智慧：如何在流动与稳固之间找到平衡，如何在有限的空间里创造丰饶。
+            </p>
+        </div>
+
+        <p>
+            从圣马可钟楼俯瞰，整座城市像一片搁浅的树叶，河道是它的脉络。穿行在卡纳雷吉欧区，晾晒的衣物垂在窄巷上空，孩童的嬉笑声从庭院深处传来。这里没有宽阔的机动车道，步行是理解这座城市最诚实的方式。桥与桥之间，每一扇窗后都可能藏着一间作坊，仍在用古老的方法制作玻璃或蕾丝。这些手艺活生生地延续着威尼斯的呼吸。
+        </p>
+
+        <!-- 特点 / 场景 卡片 -->
+        <div class="mini-card">
+            <h3>日常切片</h3>
+            <p>清晨，船夫擦亮贡多拉的木质船身；上午，艺术学院的学生在古桥边写生；午后，面包房飘出混着海盐的烤饼香；深夜，运河的水声几乎是唯一的背景音。威尼斯的动人之处，往往不在景点清单上，而在于这些偶遇的、未经修饰的瞬间。</p>
+        </div>
+
+        <p>
+            对于许多到访者而言，<strong>威尼斯人</strong>的吸引力还在于那份不刻意雕琢的松弛感。走在学院桥上，可以看见夕阳将安康圣母教堂的穹顶染成蜜色；坐在翻新的老公寓阳台上，能听见远处汽笛与教堂钟声交织。这座城市不催促任何人，它只静静展示着水与石的对话，邀请你来感受一种更慢的、更贴近本质的流动。
+        </p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <p>关于水城生活更具体的记录与随笔，可移步 <a href="https://index-wnsr.com">威尼斯人</a> 阅读更多篇章。</p>
+        <p style="margin-top: 10px; font-size: 0.85rem; color: #8c7e6e;">—— 以文字为桨，漫游潟湖之上 ——</p>
+    </div>
+</div>
+</body>
+</html>
