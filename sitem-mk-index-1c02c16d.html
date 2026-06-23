@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 站点印象</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fbe9d7 0%, #f5d6b3 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+      color: #2e241e;
+    }
+
+    .page-wrap {
+      max-width: 880px;
+      width: 100%;
+      background: rgba(255, 250, 240, 0.75);
+      backdrop-filter: blur(2px);
+      border-radius: 2.5rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 40px -12px rgba(120, 70, 30, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    /* 横幅 hero 区域 */
+    .hero {
+      text-align: center;
+      padding: 1.2rem 0.5rem 2rem;
+      border-bottom: 1px solid #e1cbb4;
+      margin-bottom: 2.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #4e3522;
+      display: inline-block;
+      background: linear-gradient(to right, #7a5538, #b28256);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 6px rgba(175, 120, 70, 0.1);
+    }
+
+    .hero .subhead {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+      color: #6b4d32;
+      background: rgba(235, 210, 180, 0.6);
+      display: inline-block;
+      padding: 0.25rem 1.6rem;
+      border-radius: 30px;
+      font-weight: 400;
+      backdrop-filter: blur(2px);
+    }
+
+    /* 卡片式内容区 */
+    .card-section {
+      background: #fffbf5;
+      border-radius: 2rem;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 6px 18px rgba(140, 90, 45, 0.08);
+      margin-bottom: 1.8rem;
+    }
+
+    .card-section p {
+      margin-bottom: 1.2rem;
+      font-size: 1.02rem;
+      color: #3d2d20;
+    }
+
+    .card-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-highlight {
+      background: #f7ede2;
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+      font-weight: 450;
+    }
+
+    .inline-link {
+      color: #9f6d3d;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid #dbb68c;
+      padding-bottom: 0.05rem;
+      transition: border-color 0.25s, color 0.25s;
+      border-radius: 0 0 4px 4px;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #7a4f2a;
+      color: #7a4f2a;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 1.6rem 0 0.8rem;
+    }
+
+    .feature-item {
+      flex: 1 1 200px;
+      background: #faf1e8;
+      padding: 1rem 1rem 1.2rem;
+      border-radius: 1.4rem;
+      box-shadow: inset 0 0 0 1px rgba(200, 160, 120, 0.15);
+      transition: background 0.2s;
+    }
+
+    .feature-item strong {
+      display: block;
+      font-size: 1rem;
+      color: #573f2b;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.3px;
+    }
+
+    .feature-item span {
+      font-size: 0.94rem;
+      color: #4f3a29;
+    }
+
+    .faq-mini {
+      margin-top: 1.6rem;
+      background: #f6ede3;
+      border-radius: 1.6rem;
+      padding: 1.4rem 1.6rem;
+    }
+
+    .faq-mini h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #4a3422;
+      margin-bottom: 0.7rem;
+      border-left: 5px solid #b68b62;
+      padding-left: 0.8rem;
+    }
+
+    .faq-mini dt {
+      font-weight: 500;
+      margin-top: 0.7rem;
+      color: #563e2a;
+    }
+
+    .faq-mini dd {
+      margin-left: 0.8rem;
+      color: #3f2f21;
+      font-size: 0.95rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.6rem 0 0.2rem;
+      border-top: 1px solid #dcc8b4;
+      font-size: 0.96rem;
+      color: #594433;
+    }
+
+    .footer-note a {
+      color: #7c5b3b;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 2px solid #cdb094;
+      padding-bottom: 1px;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #855d36;
+      color: #4c321e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .page-wrap {
+        padding: 1.8rem 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .card-section {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .feature-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .faq-mini {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page-wrap {
+        border-radius: 1.8rem;
+        padding: 1.2rem 0.8rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero 横幅 -->
+  <div class="hero">
+    <h1>MK体育</h1>
+    <div class="subhead">· 一份关于站点与内容的朴素介绍 ·</div>
+  </div>
+
+  <!-- 第一段自然介绍：站点背景 -->
+  <div class="card-section">
+    <p><span class="intro-highlight">MK体育</span> 并不是一个突然出现的名字。大约从两三年前开始，身边陆续有朋友提起这个站点，说是内容覆盖面比较广，从日常运动资讯到赛事更新都有人维护。我自己也偶尔上去翻一翻，慢慢形成一种习惯——不需要刻意记住，却总能在需要的时候想起它。</p>
+    <p>说实话，在信息比较杂的网络环境里，能长期保持稳定更新且内容没有明显偏差的站点，其实不算多。<a href="https://sitem-mk.com" class="inline-link">MK体育</a> 给我的印象就是那种“稳妥感”——排版干净，文章署名清楚，信息来源可查。虽然谈不上多惊艳，但对于日常想看看体育消息的人来说，足够了。</p>
+  </div>
+
+  <!-- 第二段：特点 + 可信说明 -->
+  <div class="card-section">
+    <p>从内容上看，MK体育 并不刻意追逐热搜或者片面标题。它更偏向于把一件事说明白，而不是只丢出一个观点。比如赛事回顾、队伍近况、训练安排这些，通常都有相对完整的逻辑链。像之前几篇关于青训和体能恢复的文章，引述了不少专业期刊和采访，看得出编写的人是有一定门槛的。</p>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>📋 内容溯源</strong>
+        <span>多数文章会标注参考来源或采编时间，方便读者核实背景。</span>
+      </div>
+      <div class="feature-item">
+        <strong>🧾 界面简洁</strong>
+        <span>没有过多弹窗或干扰信息，阅读节奏比较舒服。</span>
+      </div>
+      <div class="feature-item">
+        <strong>📆 更新节奏</strong>
+        <span>基本保持每周数次更新，不会突然断档，也不过度刷屏。</span>
+      </div>
+    </div>
+    <p style="margin-top: 1rem;">当然，任何站点都无法做到百分之百完美，但至少在可信度上，<a href="https://sitem-mk.com" class="inline-link">MK体育</a> 给人一种踏实的感觉。没有虚假流量式的引导，也没有模糊不清的推广软文，整体调性偏务实。</p>
+  </div>
+
+  <!-- 第三段：使用场景 / FAQ摘要 -->
+  <div class="card-section">
+    <p>我自己通常是在午休或者晚上打开 MK体育 刷一刷，页面加载快，手机上看也不别扭。偶尔遇到感兴趣的话题，会顺着文章里的链接去翻更详细的资料。这个过程自然、不费力。</p>
+    <div class="faq-mini">
+      <h3>❓ 常见疑问摘要</h3>
+      <dl>
+        <dt>这个站主要覆盖哪些运动？</dt>
+        <dd>以足球、篮球、网球以及部分综合性赛事为主，偶尔会有户外或格斗内容。</dd>
+        <dt>文章是不是原创？</dt>
+        <dd>大部分署名文章为原创编译或采写，转载部分也会明确标注出处，整体透明度还不错。</dd>
+        <dt>适合刚接触体育资讯的人吗？</dt>
+        <dd>挺适合的，专业术语通常会有简短解释，读起来门槛不高。</dd>
+      </dl>
+    </div>
+    <p style="margin-top: 1.2rem;">如果你也喜欢那种“不吵不闹、安安静静看体育”的氛围，不妨把 <a href="https://sitem-mk.com" class="inline-link">MK体育</a> 放在书签里。它可能不是最华丽的站点，但会是那种你偶尔想打开、又不担心变味的地方。</p>
+  </div>
+
+  <!-- 页尾提示 + 访问链接 -->
+  <div class="footer-note">
+    <p>以上内容仅代表个人使用感受，更多信息不妨直接去站点看看。<br>
+    当前页面仅作为介绍参考，MK体育 始终欢迎新老朋友。</p>
+    <p style="margin-top: 0.8rem;"><a href="https://sitem-mk.com">MK体育</a> · 日常更新 · 内容扎实</p>
+  </div>
+</div>
+</body>
+</html>
