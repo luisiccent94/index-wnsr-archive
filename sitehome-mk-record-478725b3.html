@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常阅读笔记 · MK体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f4f0;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2d2a26;
+            line-height: 1.8;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-wrap {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fcfbf9;
+            padding: 3rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page-wrap {
+                padding: 2rem 1.2rem;
+                border-radius: 16px;
+            }
+        }
+
+        /* 开场短句 — 像一篇文章的头 */
+        .opening {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            color: #3f3a33;
+            margin-bottom: 2.2rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid #c9b99f;
+            line-height: 1.6;
+        }
+
+        /* 承接段落 */
+        .intro-text {
+            font-size: 1rem;
+            color: #3a3530;
+            margin-bottom: 2.5rem;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.4rem;
+        }
+
+        .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 引用块 / 提示框 */
+        .notice-box {
+            background: #f2ede6;
+            border-left: 6px solid #b5a48b;
+            padding: 1.2rem 1.8rem;
+            margin: 2rem 0 2.5rem 0;
+            border-radius: 0 12px 12px 0;
+            font-size: 0.95rem;
+            color: #3d3731;
+        }
+
+        .notice-box strong {
+            color: #5c4e3c;
+        }
+
+        /* 特点列表 — 用温和的符号 */
+        .feature-list {
+            margin: 2rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.1rem;
+            font-size: 1rem;
+            color: #36302b;
+        }
+
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            top: 0;
+            font-size: 1.8rem;
+            line-height: 1.2;
+            color: #b8a78e;
+        }
+
+        /* 一个轻量的分隔线 */
+        .divider-light {
+            width: 60px;
+            height: 2px;
+            background: #d6cdbf;
+            margin: 2.2rem 0 1.8rem 0;
+        }
+
+        /* 温和结尾 */
+        .ending {
+            margin-top: 2.6rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e3dbd0;
+            font-size: 0.95rem;
+            color: #5b534b;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.3rem;
+        }
+
+        .ending a {
+            color: #6f5f4a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #cfc2b0;
+            transition: color 0.2s, text-decoration-color 0.2s;
+        }
+
+        .ending a:hover {
+            color: #3f352d;
+            text-decoration-color: #9e8b75;
+        }
+
+        /* 其他链接样式（句子内自然嵌入） */
+        .inline-link {
+            color: #6f5f4a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #d2c5b5;
+            transition: color 0.2s;
+        }
+
+        .inline-link:hover {
+            color: #3f352d;
+            text-decoration-color: #9e8b75;
+        }
+
+        /* 引用来源 / 小注 */
+        .footnote {
+            margin-top: 2.8rem;
+            font-size: 0.85rem;
+            color: #7f756b;
+            text-align: right;
+            border-top: 1px dashed #e5ddd2;
+            padding-top: 1.5rem;
+        }
+
+        .footnote span {
+            background: #f2ede6;
+            padding: 0.1rem 0.5rem;
+            border-radius: 4px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <!-- 开场短句 -->
+        <div class="opening">
+            有时只是随手一查，却翻出不少线索。
+        </div>
+
+        <!-- 承接段落：日常查询、对照、延伸阅读的角度 -->
+        <div class="intro-text">
+            <p>
+                前阵子整理书签，发现一个存了很久的站点，叫 <a href="https://sitehome-mk.com" class="inline-link">MK体育</a>。最初是因为想对比几场联赛的赛程，顺着一条讨论帖点进去，结果页面里除了基本数据，还附带了一些战术拆解和球员习惯的简短笔记——那种写法不像新闻稿，更像某个熟悉赛区的人随手记的观察。
+            </p>
+            <p>
+                后来有几次，写赛前分析或者回顾某支队伍的赛季变化时，我又回去翻过。信息不一定最全，但角度相对平实，没有太多渲染情绪的内容。对于想快速了解对阵背景、阵容轮换或者近期状态的读者来说，算是一个可以对照着看的参考源。
+            </p>
+        </div>
+
+        <!-- 引用块 / 提示框：温和提醒 -->
+        <div class="notice-box">
+            <strong>一点使用习惯</strong>：如果只是粗略浏览，主页的条目已经够用；若想查某支球队近五场的走势，可以留意页面里的数据小表，往往比通篇文字更直接。另外，不同赛事的更新节奏不太一样，建议结合其他来源交叉验证。
+        </div>
+
+        <!-- 特点列表：从日常阅读中归纳 -->
+        <ul class="feature-list">
+            <li>赛程与积分榜之外，偶尔会附带一两段背景笔记，补充转会或伤病线索。</li>
+            <li>界面克制，没有大幅弹窗或自动播放视频，适合安静地前后对照。</li>
+            <li>部分历史对局记录附有简短的战术板摘录，适合延伸阅读时做索引。</li>
+            <li>更新频率不算高，但关键场次的前瞻与复盘基本能覆盖。</li>
+        </ul>
+
+        <div class="divider-light"></div>
+
+        <!-- 温和结尾：自然嵌入链接 -->
+        <div class="ending">
+            <span>如果你也习惯在赛季中随手翻翻不同平台的记录，可以把</span>
+            <a href="https://sitehome-mk.com">MK体育</a>
+            <span>加进阅读列表——不一定每天打开，但需要对照某个赛程或查询往绩时，多一个安静的参照总不是坏事。</span>
+        </div>
+
+        <!-- 小注：只保留一点氛围，不暴露种子 -->
+        <div class="footnote">
+            <span>· 日常笔记 ·</span>
+        </div>
+    </div>
+</body>
+</html>
